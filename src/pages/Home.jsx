@@ -17,11 +17,11 @@ const Home = () => {
           <h1 className='dark:text-white text-2xl font-700'>gitFinder</h1>
           <div>
             <div className={`cursor-pointer flex gap-2 px-3 items-center ${theme === 'light' ? 'block' : 'hidden'}`} onClick={toggleTheme}>
-              <img src='/icon-moon.svg' />
+              <img src='/icon-moon.svg' alt="icon" />
               <p className='text-[16px] font-medium'>Dark</p>
             </div>
             <div className={`cursor-pointer flex gap-2 px-2 items-center ${theme === 'light' ? 'hidden' : 'block'}`} onClick={toggleTheme}>
-              <img src='/icon-sun.svg' />
+              <img src='/icon-sun.svg' alt="icon" />
               <p className='text-[16px] font-medium dark:text-white'>Light</p>
             </div>
           </div>
@@ -30,7 +30,7 @@ const Home = () => {
         <Search />
         {
           isLoading ? (
-            <img src='/loading.gif' alt='loader' className='h-[60px] w-[60px]'/>
+            <img src='/loading.gif' alt='loader' className='h-[60px] w-[60px]' />
           ) : (
             data && <Details />
           )
